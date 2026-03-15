@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suguru Yamaguchi</title>
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #ffffff;
+      --link: #2563eb;
+      --max: 920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .intro {
+      margin: 0 0 18px;
+      max-width: 720px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .photo {
+        width: 132px;
+        height: 132px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">Suguru Yamaguchi</div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#links">Links</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="top">
+      <div class="photo">
+        <!-- プロフィール画像を使う場合は下の行のコメントを外し，portrait.jpg などに差し替える -->
+        <!-- <img src="portrait.jpg" alt="Suguru Yamaguchi"> -->
+        <span>No Image</span>
+      </div>
+      <div>
+        <h1>山口 卓 / Suguru Yamaguchi</h1>
+        <p class="subtitle">東京大学大学院工学系研究科 システム創成学専攻 修士課程</p>
+        <p class="intro">
+          Blue-green algae を用いた六価クロムの吸着・脱着機構と，資源循環型除去プロセスの設計を研究している．
+          特に，pH 依存的な吸着挙動，表面での価数変化，脱着・再生条件の解明に関心を持つ．
+        </p>
+        <div class="hero-links">
+          <a href="#links">External Links</a>
+          <a href="mailto:your-email@example.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        東京大学大学院工学系研究科システム創成学専攻に所属している．
+        研究テーマは，Blue-green algae バイオマスシートを用いた六価クロム Cr(VI) の吸着・脱着機構の解明である．
+        吸着現象を単なる除去性能としてではなく，吸着・還元・安定化の逐次過程として捉え，
+        実験，分光分析，価数評価，モデリングを通じて機構理解を深めることを目指している．
+      </p>
+      <p class="small">
+        Keywords: Hexavalent chromium, Blue-green algae, Biosorption, Adsorption, Desorption, Resource circulation
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        六価クロムは高い毒性を有する有害元素であり，持続可能な除去技術の確立が求められている．
+        私は，Blue-green algae を用いた biosorption に着目し，Cr(VI) 除去を「吸着→還元→安定化」の連続過程として理解することを目標としている．
+      </p>
+      <ul>
+        <li>pH，初期濃度，共存イオン条件が吸着・脱着挙動に与える影響の解析</li>
+        <li>FT-IR，XPS，UV-vis などを用いた表面状態・価数変化の評価</li>
+        <li>GWB，PHREEQC を用いた表面錯体モデリングの検討</li>
+        <li>再生利用を含む資源循環型プロセス設計への展開</li>
+      </ul>
+    </section>
+
+    <section id="outputs">
+      <h2>Outputs</h2>
+      <ul>
+        <li>
+          <strong>投稿準備中論文</strong><br>
+          Mechanism of Hexavalent Chromium Adsorption–Desorption by Blue-green Algae
+        </li>
+        <li>
+          <strong>学会発表</strong><br>
+          Mechanism of Hexavalent Chromium Adsorption-Desorption by Blue-Green Algae and Its Potential Application to Wastewater, The Geochemical Society of Japan, 2025
+        </li>
+        <li>
+          <strong>学会発表</strong><br>
+          Estimation of Saturated Adsorption Capacity of Cr(VI) by Blue-Green Algae, Exchange Meeting on Resources, Materials, and Environment Technologies, 2024
+        </li>
+        <li>
+          <strong>特許出願</strong><br>
+          Method and Material for Removal of Hexavalent Chromium, Japanese Patent Application No. 2025-117882
+        </li>
+      </ul>
+      <p class="small">
+        題名・著者順・掲載情報は今後更新予定．
+      </p>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.sys.t.u-tokyo.ac.jp/" target="_blank" rel="noopener noreferrer">Department of Systems Innovation</a></li>
+        <li><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      Last updated: March 2026
+    </footer>
+  </main>
+</body>
+</html>
